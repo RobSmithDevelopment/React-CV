@@ -1,38 +1,173 @@
+/* removing built in margins and spacing and setting a font style to all elements */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+/* giving height and grid to the container of the entire application */
 .App {
-  text-align: center;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr 1fr;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+/* sidebar section */
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* positioning sidebar in the grid and styling of the sidebar */
+.Sidebar-wrapper {
+  grid-column-start: 2;
+  grid-column-end: 3;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: lightblue;
+  height: 700px;
+}
+/* styling the profile section */
+.profile-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* styling the profile picture on sidebar */
+.profile-image {
+  margin-top: 25px;
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+}
+/* styling the name under profile image */
+.profile-name {
+  font-size: 2rem;
+  margin-top: 15px;
+}
+/* styling of hr's to seperate sections */
+.hr {
+  opacity: 0.2;
+  padding: 10px 20px 0;
+  border-bottom: 1px solid black;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+/* styling of location line on sidebar */
+.location {
+  display: flex;
 }
 
-.App-link {
-  color: #61dafb;
+.location-text {
+  margin-left: 10px;
+  font-size: 1rem;
+}
+/* styling of email line on sidebar */
+.email {
+  display: flex;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.email-text {
+  margin-top: 2.5px;
+  margin-left: 10px;
+  font-size: 1rem;
 }
+/* styling of mobile line on sidebar */
+.mobile {
+  display: flex;
+}
+
+.mobile-text {
+  margin-left: 10px;
+  font-size: 1rem;
+}
+
+/* main CV section */
+
+/* styling of main CV section wrapper */
+.main-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  background: lightblue;
+}
+/* styling of the wrapper of the content in the main CV section */
+.mainContent-wrapper {
+  margin-left: 30px;
+}
+/* styling the about me section */
+.about-wrapper {
+  display: flex;
+}
+
+.header {
+  margin-top: 20px;
+  margin-left: 10px;
+  font-size: 2rem;
+}
+
+.about-text {
+  width: 80%;
+  margin-bottom: 10px;
+}
+
+.about-icon {
+ height: 50px;
+ margin-top: 16px; 
+  
+}
+
+.hr-main {
+  opacity: 0.2;
+  padding: 10px 20px 0;
+  border-bottom: 1px solid black;
+  margin-bottom: 20px;
+  width: 80%;
+}
+/* styling of the education section */
+.education-wrapper {
+  display: flex;
+}
+
+.education-name {
+  margin-top: 20px;
+}
+
+.education-icon {
+  width: 50px;
+  height: 65px;
+}
+
+.education-type {
+  font-weight: 500;
+  font-style: italic;
+}
+
+.education-instance {
+  font-style: italic;
+  width: 80%;
+}
+/* styling of the projects section */
+.project-wrapper {
+  margin-top: 10px;
+  display: flex;
+}
+
+.project-icon {
+  width: 60px;
+  height: 65px;
+}
+
+.project-name {
+  margin-top: 20px;
+}
+
+.project-instance {
+  margin-top: 10px;
+  font-style: italic;
+  width: 80%;
+}
+/* styling of references text at bottom of page */
+.references {
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+

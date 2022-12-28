@@ -1,23 +1,13 @@
-import logo from './logo.svg';
+// importing the two CV components
+import Sidebar from './Sidebar'
+import Main from './Main'
 import './App.css';
-
+// declaring the two components within the app composing the CV
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Sidebar />
+      <Main />
     </div>
   );
 }
